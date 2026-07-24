@@ -178,7 +178,7 @@ spatiotemporal-violence-detection/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/spatiotemporal-violence-detection.git
+git clone https://github.com/lourencodebonnet/spatiotemporal-violence-detection.git
 cd spatiotemporal-violence-detection
 ```
 
