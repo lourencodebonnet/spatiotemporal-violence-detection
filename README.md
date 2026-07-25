@@ -13,13 +13,6 @@
 
 </div>
 
-<!--
-Add the header image after uploading assets/header.png:
-
-<p align="center">
-  <img src="assets/header.png" alt="Spatiotemporal violence detection architecture" width="100%">
-</p>
--->
 
 ## Overview
 
@@ -33,6 +26,12 @@ The architecture is designed to balance:
 * Computational efficiency
 * Support for variable-length videos
 * Modular spatial and temporal components
+
+
+<p align="center">
+  <img src="assets/pipeline.png" alt="Spatiotemporal violence detection architecture" width="100%">
+</p>
+
 
 ## Key Results
 
@@ -59,15 +58,12 @@ Cross-dataset evaluation reveals a substantial decline in generalization perform
 
 ## Example Inference
 
-<!--
-Replace this section after uploading assets/demo.gif:
-
 <p align="center">
   <img src="assets/demo.gif" alt="Example model inference" width="850">
 </p>
--->
 
-> A short precomputed inference visualization will be added here. It will show sampled frames, predicted violence probability over time, and the final classification.
+
+> [Video Source](https://www.kaggle.com/datasets/mohamedmustafa/real-life-violence-situations-dataset )
 
 ## Architecture
 
@@ -130,13 +126,6 @@ Padding masks prevent artificial padded frames from influencing attention calcul
 | **True Non-Violence** |                    137 |                  6 |
 | **True Violence**     |                      5 |                144 |
 
-<!--
-A visual confusion matrix can later replace or supplement this table:
-
-<p align="center">
-  <img src="assets/confusion_matrix.png" alt="Confusion matrix" width="550">
-</p>
--->
 
 ## Cross-Dataset Generalization
 
@@ -158,19 +147,12 @@ spatiotemporal-violence-detection/
 ├── README.md
 ├── requirements.txt
 ├── src/
-│   └── violence_detection.py
-├── demo/
-│   ├── inference_demo.ipynb
-│   └── sample_predictions.json
+│   └── violence_detection.ipynb
 ├── assets/
-│   ├── header.png
 │   ├── pipeline.png
 │   ├── demo.gif
-│   └── confusion_matrix.png
-├── paper/
-│   └── violence_detection_paper.pdf
-└── results/
-    └── metrics.json
+└── paper/
+    └── violence_detection_paper.pdf
 ```
 
 ## Installation
@@ -188,6 +170,40 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 
+## Dataset setup
+
+The datasets are not included in this repository. Download them separately and comply with their respective licenses.
+
+Before running the notebook, create a project folder anywhere on your machine or Google Drive (the original model was trained on Google Colab). 
+You only need to change `PROJECT_ROOT` in the notebook; keep the remaining folder names exactly as shown below:
+
+```text
+PROJECT_ROOT/
+├── kaglle_violence (Unzipped Files)/
+│   └── Real Life Violence Dataset/
+│       ├── Violence/
+│       └── NonViolence/
+├── New violence data/
+│   └── ADA new violence dataset (Unzipped Files)/
+│       └── violence-detection-dataset/
+└── inference_videos/
+```
+## Dataset
+
+The model was trained and evaluated using the **Real Life Violence Situations Dataset**, containing 2,000 balanced video clips:
+
+* 1,000 violence videos
+* 1,000 non-violence videos
+
+The dataset itself is not redistributed through this repository. Please obtain it from its original source and follow the original dataset license and usage conditions.
+[Data Source](https://www.kaggle.com/datasets/mohamedmustafa/real-life-violence-situations-dataset )
+
+### Configure paths
+
+Open `src/violence_detection.ipynb` and update the `PROJECT_ROOT` value in the path-configuration cell to the location of the folder created above.
+
+It currently has this value: `PROJECT_ROOT = Path("/content/drive/MyDrive/Advanced Analytics")`
+
 ## Usage
 
 The cleaned training, evaluation, and inference commands will be documented after the main implementation file has been added.
@@ -200,16 +216,6 @@ Planned usage documentation:
 * Checkpoint evaluation
 * Inference on an individual video
 * Generation of prediction visualizations
-
-## Dataset
-
-The model was trained and evaluated using the **Real Life Violence Situations Dataset**, containing 2,000 balanced video clips:
-
-* 1,000 violence videos
-* 1,000 non-violence videos
-
-The dataset itself is not redistributed through this repository. Please obtain it from its original source and follow the original dataset license and usage conditions.
-https://www.kaggle.com/datasets/mohamedmustafa/real-life-violence-situations-dataset 
 
 ## Paper
 
@@ -248,10 +254,6 @@ Potential extensions include:
 * Lourenco Debonnet
 * Marvin Hahne
 * Kevin Le
-
-## Citation
-
-A formal citation will be added alongside the final version of the paper.
 
 ## License
 
