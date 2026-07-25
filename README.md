@@ -209,6 +209,7 @@ The model was trained and evaluated using the **Real Life Violence Situations Da
 * 1,000 non-violence videos
 
 The dataset itself is not redistributed through this repository. Please obtain it from its original source and follow the original dataset license and usage conditions.
+https://www.kaggle.com/datasets/mohamedmustafa/real-life-violence-situations-dataset 
 
 ## Paper
 
