@@ -1,0 +1,15 @@
+# Tested with Python 3.11.
+# For CUDA-enabled PyTorch builds, follow https://pytorch.org/get-started/locally/
+# before installing this file, then install the remaining packages.
+
+torch==2.5.1
+torchvision==0.20.1
+decord==0.6.0
+opencv-python==4.10.0.84
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.5.2
+Pillow==10.4.0
+matplotlib==3.9.2
+tqdm==4.66.5
+jupyterlab==4.3.0
