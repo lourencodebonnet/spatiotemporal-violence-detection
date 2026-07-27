@@ -190,13 +190,26 @@ PROJECT_ROOT/
 ```
 ## Dataset
 
+### Primary dataset
+
 The model was trained and evaluated using the **Real Life Violence Situations Dataset**, containing 2,000 balanced video clips:
 
-* 1,000 violence videos
-* 1,000 non-violence videos
+- 1,000 violence videos
+- 1,000 non-violence videos
 
-The dataset itself is not redistributed through this repository. Please obtain it from its original source and follow the original dataset license and usage conditions.
-[Data Source](https://www.kaggle.com/datasets/mohamedmustafa/real-life-violence-situations-dataset )
+The dataset is not redistributed through this repository. Please obtain it from its original source and comply with its license and usage conditions.
+
+[Primary dataset on Kaggle](https://www.kaggle.com/datasets/mohamedmustafa/real-life-violence-situations-dataset)
+
+### External generalization dataset
+
+To assess cross-dataset generalization, the trained model was additionally evaluated on the **A Dataset for Automatic Violence Detection in Videos** dataset.
+
+This external evaluation uses visually and semantically different video material to test how well the model transfers beyond the data distribution on which it was trained.
+
+The external dataset is not redistributed through this repository. Please obtain it from the original authors and comply with its license and usage conditions.
+
+[External dataset repository](https://github.com/airtlab/A-Dataset-for-Automatic-Violence-Detection-in-Videos/tree/master)
 
 ### Configure paths
 
@@ -206,16 +219,11 @@ It currently has this value: `PROJECT_ROOT = Path("/content/drive/MyDrive/Advanc
 
 ## Usage
 
-The cleaned training, evaluation, and inference commands will be documented after the main implementation file has been added.
+The complete implementation is provided in the notebook:
 
-Planned usage documentation:
-
-* Dataset preparation
-* Frame extraction and preprocessing
-* Model training
-* Checkpoint evaluation
-* Inference on an individual video
-* Generation of prediction visualizations
+```text
+src/violence_detection.ipynb
+```
 
 ## Paper
 
